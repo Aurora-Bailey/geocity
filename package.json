@@ -5,6 +5,7 @@
   "author": "Brad Thompson <bradleyglind@gmail.com>",
   "private": true,
   "scripts": {
+    "server": "node --inspect server/geocity.js",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
@@ -14,8 +15,10 @@
   },
   "dependencies": {
     "avsc": "^4.1.10",
+    "express": "^4.14.0",
     "mongodb": "^2.2.11",
     "performance-now": "^0.2.0",
+    "request": "^2.79.0",
     "vue": "^2.1.0",
     "ws": "^1.1.1"
   },
