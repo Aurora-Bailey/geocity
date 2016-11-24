@@ -62,6 +62,8 @@ function handleMessage (d) {
     }
   } else if (d.m === 'timeout') {
     sendObj({m: 'timeout', alive: true})
+  } else if (d.m === 'city_suggestions') {
+    VueData.pages.search.suggestions = d.arr
   }
 }
 

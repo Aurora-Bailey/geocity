@@ -9,7 +9,12 @@ let Data = {
     id: 0,
     name: ''
   },
-  WebSocketState: 'dead'
+  WebSocketState: 'dead',
+  pages: {
+    search: {
+      suggestions: []
+    }
+  }
 }
 
 export default Data
