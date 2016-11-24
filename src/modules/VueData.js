@@ -8,7 +8,8 @@ let Data = {
   user: {
     id: 0,
     name: ''
-  }
+  },
+  WebSocketState: 'dead'
 }
 
 export default Data

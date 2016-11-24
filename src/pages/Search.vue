@@ -1,14 +1,22 @@
 <template>
   <div class="search" >
-    search
+    search <button v-on:click="sendPing()">PING</button>
   </div>
 </template>
 
 <script>
+  /* Modules */
+  import WS from '../modules/WebSocket'
+
   /* Components */
 
   export default {
-    name: 'search'
+    name: 'search',
+    methods: {
+      sendPing: function () {
+        WS.sendObj({m: 'ping', v: 'asdf'})
+      }
+    }
   }
 </script>
 

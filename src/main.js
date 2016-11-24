@@ -5,6 +5,11 @@ import VueResource from 'vue-resource'
 import App from './App'
 import VueData from './modules/VueData'
 
+// WebSocket
+// This is to insure WebSocket is called at least once
+import WS from './modules/WebSocket'
+WS.sendObj({m: 'init'}, true)
+
 // Pages
 import Home from './pages/Home'
 import Search from './pages/Search'
