@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <top-nav></top-nav>
+
+    <!-- route outlet -->
+    <!-- component matched by the route will render here -->
+
+    <transition name="slide-fade">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+  /* Core */
+  import VueRouter from 'vue-router'
 
-export default {
-  name: 'app',
-  components: {
-    Hello
+  /* Components */
+  import TopNav from './parts/TopNav'
+
+  export default {
+    name: 'app',
+    components: {
+      TopNav
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  /* SASS imports */
+  @import "sass/Variables"
+  @import "sass/Mixins"
+  @import "sass/General"
+
+  #app
+    position: relative
+    min-height: 100%
+    overflow-x: hidden
+    overflow-y: auto
+
 </style>
